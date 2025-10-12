@@ -1,0 +1,162 @@
+/* Overall page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+#entireContent {
+    text-align: center;
+}
+
+/* Header styling */
+#header {
+    color: white;
+    font-size: 2.5em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+/* Main container */
+#main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Input field styling */
+#inputext {
+    width: 70%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+#inputext:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Add button styling */
+#buttons {
+    padding: 15px 40px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+#buttons:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+#buttons:active {
+    transform: translateY(0);
+}
+
+/* Task list styling */
+#tasklist {
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+}
+
+/* Individual task item */
+#tasklist li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    margin: 12px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    animation: slideIn 0.3s ease-out;
+}
+
+#tasklist li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkbox styling */
+#tasklist li input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #bb6adb;
+}
+
+/* Task text */
+#tasklist li span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+}
+
+/* Delete button */
+#tasklist li button {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(245, 87, 108, 0.3);
+}
+
+#tasklist li button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(245, 87, 108, 0.5);
+}
+
+/* Animation for new tasks */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    #main-container {
+        padding: 20px;
+    }
+    
+    #inputext {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    
+    #header {
+        font-size: 2em;
+    }
+}
