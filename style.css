@@ -1,17 +1,19 @@
-/* Overall page styling */
+/* ==================== GLOBAL STYLES ==================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    transition: all 0.3s;
 }
 
 #entireContent {
     text-align: center;
+    transition: all 0.3s;
 }
 
-/* Header styling */
+/* ==================== HEADER ==================== */
 #header {
     color: white;
     font-size: 2.5em;
@@ -21,7 +23,7 @@ body {
     font-weight: bold;
 }
 
-/* Main container */
+/* ==================== MAIN CONTAINER ==================== */
 #main-container {
     max-width: 600px;
     margin: 0 auto;
@@ -29,9 +31,17 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
 }
 
-/* Input field styling */
+/* Completed tasks */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
+
+/* ==================== INPUT FIELD ==================== */
 #inputext {
     width: 70%;
     padding: 15px;
@@ -48,7 +58,7 @@ body {
     box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
 }
 
-/* Add button styling */
+/* ==================== ADD BUTTON ==================== */
 #buttons {
     padding: 15px 40px;
     font-size: 16px;
@@ -72,7 +82,32 @@ body {
     transform: translateY(0);
 }
 
-/* Task list styling */
+/* ==================== FILTER BUTTONS ==================== */
+#filters {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#filters button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#filters button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== TASK LIST ==================== */
 #tasklist {
     padding: 0;
     margin-top: 30px;
@@ -98,7 +133,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Checkbox styling */
+/* Checkbox */
 #tasklist li input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -113,6 +148,7 @@ body {
     font-size: 16px;
     color: #333;
     word-break: break-word;
+    cursor: pointer;
 }
 
 /* Delete button */
@@ -133,7 +169,7 @@ body {
     box-shadow: 0 5px 15px rgba(245, 87, 108, 0.5);
 }
 
-/* Animation for new tasks */
+/* ==================== ANIMATIONS ==================== */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -145,7 +181,33 @@ body {
     }
 }
 
-/* Responsive design for mobile */
+/* ==================== DARK MODE ==================== */
+.dark-mode {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+.dark-mode #main-container {
+    background: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode #tasklist li {
+    background: #2a2a2a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    color: #f5f5f5;
+}
+
+.dark-mode #tasklist li button {
+    background: #bb86fc;
+}
+
+.dark-mode #filters button {
+    background: #bb86fc;
+    color: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 600px) {
     #main-container {
         padding: 20px;
@@ -158,5 +220,10 @@ body {
     
     #header {
         font-size: 2em;
+    }
+
+    #filters {
+        flex-direction: column;
+        gap: 10px;
     }
 }
