@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>To-Do-List</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- <link  href="script.js"> -->
-    </head>
-    <body id="entireContent">
-       <h2 id="header"> To-Do-List </h2>
-       <div id="main-container">
-       <input type="text" id="inputext" placeholder="Enter a task">
-        <div >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="entireContent">
+
+    <!-- Header -->
+    <h2 id="header">To-Do-List</h2>
+
+    <!-- Main container -->
+    <div id="main-container">
+        <!-- Input field -->
+        <input type="text" id="inputext" placeholder="Enter a task">
+
+        <!-- Add button -->
+        <div>
             <button type="button" id="buttons">Add</button>
-            
         </div>
+
+        <!-- Task list -->
         <ul id="tasklist"></ul>
-        </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+
+    <!-- Task filters -->
+    <div id="filters">
+        <button id="all">All</button>
+        <button id="pending">Pending</button>
+        <button id="completed">Completed</button>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
 </html>
